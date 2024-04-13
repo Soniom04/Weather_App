@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSniUqD9eZOmJrYhE_V9Q0T4p1imqiYuTfCBIeAo5Rhrw&s">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="wrapper">
+        <div class="container">
+            <h1>Weather App</h1>
+            <div class="tab-container">
+                <p class="tabs" data-userWeather>Your Weather</p>
+                <p class="tabs" data-searchWeather>Search Weather</p>
+            </div>
+            <div class="weather_container">
+
+                <!-- grant_location part -->
+                <div class="subset_container grant_locn_container">
+                    <img src="https://static.vecteezy.com/system/resources/thumbnails/022/493/602/small_2x/location-pin-icon-3d-render-isolated-on-transparent-background-file-format-png.png" width="100px" height="100px" loading="lazy">
+                    <p>Grant location Access</p>
+                    <p>Allow Access to get weather Information</p>
+                    <button class="btn" data-grantAccess>Grant Access</button>
+                </div>
+
+                <!-- search form part -->
+                <form class="form_container" data-searchForm>
+                    <input placeholder="Search for City..." data-searchInput>
+                    <button type="submit"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcx7BO64dK2fRVNPN1h8NkDrb8wNm2NbaQPnreLJaLYQ&s"></button>
+                </form>
+
+                <!-- loading screen container -->
+                <div class="loading-container subset_container">
+                <iframe src="loader.gif" loading="lazy" height="104px" width="104px"></iframe>
+                <p>Loading</p>
+                </div>
+
+                <div class="errorContainer" data-errorContainer>
+                    <img class="errorImage" src="https://static.vecteezy.com/system/resources/thumbnails/008/255/803/small/page-not-found-error-404-system-updates-uploading-computing-operation-installation-programs-system-maintenance-a-hand-drawn-layout-template-of-a-broken-robot-illustration-vector.jpg" alt="">
+                    Error Occured!!  City Not Found
+                </div>
+
+                <!-- my location weather  -->
+                <div class="subset_container user-info-container ">
+
+                    <div class="name">
+                        <p data-cityName></p>
+                        <img data-countryIcon>
+                    </div>
+
+                    <p data-weatherDesc></p>
+                    <img src="" data-weatherIcon>
+                    <p data-temp></p>
+
+                    <div class="parameter-container md:flex-col">
+                        <div class="parameter">
+                            <img src="https://media.istockphoto.com/id/1368763816/vector/wind-blow-vector-icon-air-puff-symbol.jpg?s=612x612&w=0&k=20&c=0GIijczbW0qFbHtaPWS9tf-QUSYCRr627AkUp5I0jRo=" height="80px" width="80px">
+                            <p>Windspeed</p>
+                            <p data-windSpeed></p>
+                        </div>
+
+                        <div class="parameter">
+                            <img src="https://w7.pngwing.com/pngs/314/726/png-transparent-moisture-computer-icons-humidity-others-desktop-wallpaper-weather-icon-humidity.png" height="80px" width="80px">
+                            <p>Humidity</p>
+                            <p data-humidity></p>
+                        </div>
+
+                        <div class="parameter">
+                            <img src="https://png.pngtree.com/png-vector/20190630/ourmid/pngtree-cloud-icon-for-your-project-png-image_1532064.jpg" height="80px" width="80px">
+                            <p>Clouds</p>
+                            <p data-clouds></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

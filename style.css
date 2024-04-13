@@ -46,6 +46,7 @@ h1{
     letter-spacing: 1.6px;
     cursor: pointer;
     padding: 5px 8px;
+    text-align: center;
 }
 
 .tabs.curr_tab{
@@ -254,14 +255,16 @@ h1{
 
 .errorContainer{
     display: none;
+    margin: 0 auto;
 }
 
 .errorContainer.active{
     display: flex;
     flex-direction: column;
     width: 90%;
-    margin: 50px;
+    margin-top: 50px;
     align-items: center;
+    justify-content: center;
 }
 
 .errorContainer img{
